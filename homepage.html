@@ -1,0 +1,77 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>+</title>
+  <link rel="icon" type="image/png" href="colicon.png"/>
+  <link rel="stylesheet" type="text/css" href="homepage.css"/>
+  <script type="text/javascript" src="homepage.js"></script>
+
+</head>
+
+<div class = "datediv">
+	<p id="demo" class = "date"></p>
+
+	<script>
+		document.getElementById("demo").innerHTML = new Date().toDateString();
+	</script>
+</div>
+
+<header>
+	<div id="nav-a">
+		<nav class = "border">
+			<ul>
+				<li><a href="https://mail.google.com/mail/u/0/#inbox">[gmail]</a></li>
+				<li><a href="https://drive.google.com">[drive]</a></li>
+				<li><a href="https://www.youtube.com/">[youtube]</a></li>
+				<li><a href="https://github.com/">[github]</a></li>
+				<li><a href="https://classroom.google.com/">[classroom]</a></li>
+				<li><a href="https://app.wire.com/">[wire]</a></li>
+				<li><a href="https://hac.fcps.org/HomeAccess/">[hac.fcps.org]</a></li>
+				<li><a href="http://omnifiedtech.com/">[omnified]</a></li>
+				<li><a href="http://remind.com/">[remind]</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<body>
+	<div class = "mainbody">
+		<div class="row">
+			    <div class="column left">
+			    	<h4>To do today</h4>
+					<div id="nav-b">
+						<ul id="myUL">
+							<li>Hit the gym</li>
+							<li>Meet George</li>
+							<li>Buy eggs</li>
+							<li>Read a book</li>
+							<li>Organize office</li>
+						</ul>
+					</div>
+					<div id="myDIV" class="header">
+						<input type="text" id="myInput" placeholder="item">
+						<span onclick="newElement()" class="addBtn">Add</span>
+					</div>
+			    </div>
+			    <div class="column right">
+			    	<h4>To do</h4>
+					<div id="nav-b">
+						<ul id="myUL">
+							<li>Hit the gym</li>
+							<li>Meet George</li>
+							<li>Buy eggs</li>
+							<li>Read a book</li>
+							<li>Organize office</li>
+						</ul>
+					</div>
+					<div id="myDIV" class="header">
+						<input type="text" id="myInput" placeholder="item">
+						<span onclick="newElement()" class="addBtn">Add</span>
+					</div>
+			    </div>
+			</div>
+		</div>
+	</body>
+</body>
+</html>
+</DOCTYPE>
