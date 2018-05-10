@@ -8,10 +8,10 @@
 
 ### Adding/replacing/removing links:
 1. open homepage.html in a text editor (notepad++, notepad, sublime, etc.)
-2. scroll down to "*/these are the links/*"
+2. scroll down to `<!-- These are the links -->`
 
 - to change the destination of the link, change the text within the "" next to href  
-   (eg. `<li><a href="change this text">[github]</a></li><"`
+   (eg. `<li><a href="change this text">[github]</a></li><"`)
 
 - to change the title of the link, change the text between the two "><"  
    (eg. `<li><a href="http://github.com/">[change this text]</a></li>`)
