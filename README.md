@@ -12,11 +12,11 @@
 
 - to change the destination of the link, change the text within the "" next to href
 
-... (eg. `<li><a href="change this text">[github]</a></li><"`
+⋅⋅⋅(eg. `<li><a href="change this text">[github]</a></li><"`
 
 - to change the title of the link, change the text between the two ><
 
-... (eg. `<li><a href="http://github.com/">[change this text]</a></li>`)
+⋅⋅⋅(eg. `<li><a href="http://github.com/">[change this text]</a></li>`)
 
 - to delete an entire link, simply delete the entire line
 
