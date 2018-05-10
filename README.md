@@ -8,13 +8,14 @@ How to add this to your new tab:
 
 Adding/replacing/removing links:
 1. open homepage.html in a text editor (notepad++, notepad, sublime, etc.)
-2. scroll down to "*/these are the links/*
-  to change the destination of the link, change the text within the "" next to href
-  (eg. <li><a href="change this text">[github]</a></li>
+2. scroll down to "*/these are the links/*"
 
-  to change the title of the link, change the text between the two ><
-  (eg. <li><a href="http://github.com/">[change this text]</a></li>)
+- to change the destination of the link, change the text within the "" next to href
+-- (eg. ><li><a href="change this text">[github]</a></li><"
 
-  to delete an entire link, simply delete the entire line
+- to change the title of the link, change the text between the two ><
+-- (eg. ><li><a href="http://github.com/">[change this text]</a></li><)
 
-  to add a link, simply clone a line by copy and pasting and changing the values (see above)
+- to delete an entire link, simply delete the entire line
+
+- to add a link, simply clone a line by copy and pasting and changing the values (see above)
