@@ -116,7 +116,7 @@ h4{
     padding-bottom: 10px;
     font-size: 14px;
     transition: 0.2s;
-    text-align: left;
+  
 
     /* make the list items unselectable */
     -webkit-user-select: none;
@@ -163,6 +163,7 @@ h4{
 /* Style the header */
 .header {
     color: black;
+    display: inline-block;
     text-align: center;
     margin-bottom: 10px;
 
@@ -180,6 +181,7 @@ h4{
 input {
     border-color: black;
     border-width: 1px;
+    text-align: center;
     width: 100%;
     max-width: 300px;
     padding: 10px;
@@ -195,6 +197,27 @@ li{
 }
 
 .ulright{
-  float: right;
+
   text-align: right;
+}
+.ulleft{
+
+  text-align: left;
+}
+
+.buttons{
+background-color: transparent;
+display: inline-block;
+margin-left: 5px;
+padding: 8px;
+color: #fff;
+border: 1px solid #fff; 
+border-radius: 5px;
+text-align: center;
+outline: none;
+text-decoration: none;
+font-size: 14px;
+}
+.buttons:hover{
+  color: #CCC;
 }
