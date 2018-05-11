@@ -104,47 +104,131 @@ h4{
   text-align: left;
 }
 
-#nav-b ul {
-    margin: 0;
-    padding: 0;
+#nav-b ul.todo li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
 }
 
-/* Style the list items */
-#nav-b ul li {
-    cursor: pointer;
-    position: relative;
-    padding-bottom: 10px;
-    font-size: 14px;
-    transition: 0.2s;
+#nav-b ul.todo {
+  width: 100%;
+  float: left;
+}
+
+#nav-b ul.todo li {
+  width: 100%;
+  float: left;
+  font-size: 14px;
+  color: #000;
+  word-break: break-word;
+}
+
+#nav-b ul.todo li:last-of-type {
+  margin: 0;
+}
+
+#nav-b ul.todo li .buttons {
+  width: 100px;
+  height: 50px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#nav-b ul.todo li .buttons button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background: none;
+  position: relative;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#nav-b ul.todo li .buttons button:last-of-type:before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background: #edf0f1;
+
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+#nav-b ul.todo li .buttons button svg {
+  width: 22px;
+  height: 22px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -11px 0 0 -11px;
+}
+
+#nav-b ul.todo li .buttons button.complete svg {
+  border-radius: 11px;
+  border: 1.5px solid #25b99a;
+
+  transition: background 0.2s ease;
+}
+
+
+#nav-b ul.todo li .buttons button svg .fill {
+  transition: fill 0.2s ease;
+}
+
+#nav-b ul.todo li .buttons button.remove svg .fill {
+  fill: #c0cecb;
+}
+
+#nav-b ul.todo li .buttons button.remove:hover svg .fill {
+    color: #555;
+  border: 1px solid #555;
+}
+
+
+#nav-b ul.todo#completed {
+  position: relative;
+  padding: 60px 0 0 0;
+}
+
+#nav-b ul.todo#completed:before {
+  content: '';
+  width: 150px;
+  height: 1px;
+  background: #d8e5e0;
+
+  position: absolute;
+  top: 30px;
+  left: 50%;
+
+  margin: 0 0 0 -75px;
+}
+
+#nav-b ul.todo#todo:empty:after {
+  content: 'You have nothing to-do!';
   
-
-    /* make the list items unselectable */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
-
-/* When clicked on, add a background color and strike out text */
-#nav-b ul li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
+#nav-b ul.todo#completed:empty:after {
+  content: 'You have yet to complete any tasks.';
 }
 
-/* Add a "checked" mark when clicked on */
-#nav-b ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
+#nav-b ul.todo#todo:after,
+#nav-b ul.todo#completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
 }
 
 /* Style the close button */
@@ -199,8 +283,10 @@ li{
 
   text-align: left;
 }
-
 .buttons{
+  
+}
+.buttonentry{
 background-color: transparent;
 
 padding: 10px;
@@ -213,7 +299,7 @@ text-decoration: none;
 font-size: 16px;
 width: 20%;
 }
-.buttons:hover{
+.buttonentry:hover{
   color: #555;
   border: 1px solid #555; 
 }
