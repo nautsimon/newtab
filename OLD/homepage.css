@@ -75,7 +75,7 @@ body {
 .left {
     width: 48%;
     padding-right: 1%;
-    text-align: center;
+    text-align: left;
 }
 
 .right {
@@ -104,7 +104,7 @@ h4{
   text-align: left;
 }
 
-#nav-b ul.todo li.checked {
+/*#nav-b ul.todo li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
@@ -230,7 +230,7 @@ h4{
   font-size: 12px;
   color: #aaa;
 }
-
+*/
 /* Style the close button */
 .close {
     position: absolute;
