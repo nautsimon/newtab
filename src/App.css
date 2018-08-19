@@ -1,51 +1,20 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+header {
+  margin-right: 15%;
+  margin-left: 15%;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom-width: 50%;
+  border-top-width: 50%;
   color: white;
+  font-family: "Roboto", sans-serif;
+  z-index: 3;
 }
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 body {
   margin: 0;
   z-index: -1;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
-}
-.main {
-  height: 100px;
-}
-h1 {
-  font-size: 50px;
-}
-
-#root {
   background: #659999; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -57,9 +26,91 @@ h1 {
     #f4791f,
     #659999
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+canvas {
+  display: block;
   position: absolute;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#nav-a li {
+  list-style: none;
+}
+#nav-a nav ul {
+  margin: 0;
+  text-align: center;
+  padding-right: 20px;
+  list-style: none;
+}
+#nav-a nav li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+#nav-a nav a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#nav-a a:hover {
+  color: #969696;
+}
+
+.datediv {
+  text-align: center;
+}
+.date {
+  font-size: 40px;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+#root {
   width: 100%;
   height: 100%;
-  z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+$ .column {
+  float: left;
+}
+
+.left {
+  width: 48%;
+  padding-right: 1%;
+  text-align: left;
+}
+
+.right {
+  width: 48%;
+  padding-left: 1%;
+  text-align: center;
+}
+.mainbody {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.list {
+  text-decoration: none;
+}
+.list:hover {
+  color: #212f3c;
+}
+
+h4 {
+  margin-bottom: 10px;
+  text-align: left;
 }

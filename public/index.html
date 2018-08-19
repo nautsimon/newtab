@@ -9,9 +9,34 @@
   <title>New Tab</title>
 </head>
 
+<div id="root"></div>
+
+<div class="datediv">
+  <p id="demo" class="date"></p>
+</div>
+
+<header>
+  <div id="nav-a">
+    <nav class="border">
+      <ul>
+        <!-- These are the links -->
+        <li><a href="https://mail.google.com/mail/u/0/#inbox">[gmail]</a></li>
+        <li><a href="https://drive.google.com">[drive]</a></li>
+        <li><a href="https://www.youtube.com/">[youtube]</a></li>
+        <li><a href="https://github.com/">[github]</a></li>
+        <li><a href="https://email.omnified.org/">[outreach mail]</a></li>
+        <li><a href="http://omnifiedtech.com/">[omnified]</a></li>
+        <li><a href="http://remind.com/">[remind]</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 <body>
-  <div id="root"></div>
 
 </body>
+<script>
+  document.getElementById("demo").innerHTML = new Date().toDateString();
+</script>
 
 </html>
