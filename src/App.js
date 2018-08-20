@@ -18,7 +18,7 @@ class App extends Component {
                 }
               },
               color: {
-                value: "#cccccc"
+                value: "#dddddd"
               },
               shape: {
                 type: "circle",

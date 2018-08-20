@@ -33,6 +33,7 @@ canvas {
   position: absolute;
   margin-top: 0px;
   margin-bottom: 0px;
+  z-index: 1;
 }
 #nav-a li {
   list-style: none;
@@ -81,7 +82,7 @@ canvas {
     width: 100%;
   }
 }
-$ .column {
+.column {
   float: left;
 }
 
@@ -113,4 +114,99 @@ $ .column {
 h4 {
   margin-bottom: 10px;
   text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+.column {
+  float: left;
+}
+
+.left {
+  width: 48%;
+  padding-right: 1%;
+  text-align: left;
+}
+
+.right {
+  width: 48%;
+  padding-left: 1%;
+  text-align: center;
+}
+.mainbody {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.list {
+  color: #17202a;
+  text-decoration: none;
+}
+.list:hover {
+  color: #212f3c;
+}
+
+h4 {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Style the header */
+.header {
+  color: black;
+  display: inline-block;
+
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 55px;
+  width: 100%;
+}
+
+/* Style the input */
+input {
+  border-color: black;
+  border-width: 1px;
+  text-align: center;
+  width: 50%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background: transparent;
+}
+
+li {
+  list-style: none;
+}
+
+.ulright {
+  text-align: right;
+}
+.ulleft {
+  text-align: left;
+}
+
+.buttonentry {
+  background-color: transparent;
+  padding: 10px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  font-size: 16px;
+  width: 20%;
+}
+.buttonentry:hover {
+  color: #555;
+  border: 1px solid #555;
+}
+
+a {
+  z-index: 100;
 }

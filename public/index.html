@@ -33,7 +33,37 @@
 </header>
 
 <body>
-
+  <div class="mainbody">
+    <div class="row">
+      <div class="column left">
+        <h4 class="ulleft">To do today</h4>
+        <div id="nav-b">
+          <ul id="myUL" class="ulleft">
+            <li>Ausherman Family Foundation grant</li>
+            <li>curriculum</li>
+            <li>send alaska plan</li>
+          </ul>
+        </div>
+      </div>
+      <div class="column right">
+        <h4 class="ulright">To do</h4>
+        <ul id="myUL" class="ulright">
+          <li>new cadet guide</li>
+          <li>orion to novva</li>
+          <li>contact amazon/google guy</li>
+          <li>verizon</li>
+          <li>japanese ceo email</li>
+          <li>clean up orion website</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header">
+    <input type="submit" id="addtoday" value="today" class="buttonentry">
+    <input type="text" id="item" class="styleinput" placeholder="add item">
+    <input type="submit" id="addlater" value="long term" class="buttonentry">
+  </div>
+  </div>
 </body>
 <script>
   document.getElementById("demo").innerHTML = new Date().toDateString();
