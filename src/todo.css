@@ -1,0 +1,36 @@
+/* Style the input */
+.entryForm {
+  pointer-events: auto;
+}
+.todoListMain .entryForm input {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  background: transparent;
+}
+::-webkit-input-placeholder {
+  color: #ffffff;
+} /* Webkit */
+:-moz-placeholder {
+  color: #ffffff;
+} /* Firefox <= 18 */
+::-moz-placeholder {
+  color: #ffffff;
+} /* Firefox >= 19 */
+:-ms-input-placeholder {
+  color: #ffffff;
+} /* Internet Explorer */
+
+.todoListMain .entryForm button {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+  transition: background-color 0.2s ease-out;
+}
+.todoListMain .entryForm button:hover {
+  background: #79bcc4;
+}
