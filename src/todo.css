@@ -8,6 +8,7 @@
   border-radius: 5px;
   font-size: 16px;
   background: transparent;
+  color: #fff;
 }
 ::-webkit-input-placeholder {
   color: #ffffff;
@@ -32,5 +33,73 @@
   transition: background-color 0.2s ease-out;
 }
 .todoListMain .entryForm button:hover {
-  background: #79bcc4;
+  background: #659999; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f4791f,
+    #659999
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f4791f,
+    #659999
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.todoListMain .list li {
+  font-size: 13px;
+  margin-right: 0px;
+  cursor: pointer;
+  pointer-events: auto;
+  color: white;
+  background: transparent;
+  margin-bottom: 0px;
+  border-radius: 2px;
+  transition: color 0.2s ease-out;
+}
+.todoListMain .list li:hover {
+  color: #79bcc4;
+}
+.todoListMain .list {
+  list-style: none;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  /* wrappping */
+  white-space: pre-wrap; /* CSS3 */
+  white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -pre-wrap; /* Opera <7 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* IE */
+}
+.todoListMain .list ul {
+  width: 100%;
+}
+.entryForm {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -240px;
+  padding-bottom: 20px;
+}
+
+.columns {
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 5%;
+}
+
+.columns .longTermColumn {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.columns .shortTermColumn {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }

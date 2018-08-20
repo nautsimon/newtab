@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-// import TodoItems from "./TodoItems";
+import TodoList from "./TodoList";
 import "./todo.css";
 
 class TodoApp extends Component {
@@ -12,6 +12,26 @@ class TodoApp extends Component {
     };
 
     this.addShortTermItem = this.addShortTermItem.bind(this);
+    this.addLongTermItem = this.addLongTermItem.bind(this);
+    this.deleteLongTermItem = this.deleteLongTermItem.bind(this);
+    this.deleteShortTermItem = this.deleteShortTermItem.bind(this);
+  }
+  deleteShortTermItem(key) {
+    var filteredStItems = this.state.stItems.filter(function(item) {
+      return item.key !== key;
+    });
+    this.setState({
+      stItems: filteredStItems
+    });
+  }
+
+  deleteLongTermItem(key) {
+    var filteredLtItems = this.state.ltItems.filter(function(item) {
+      return item.key !== key;
+    });
+    this.setState({
+      ltItems: filteredLtItems
+    });
   }
   addShortTermItem(e) {
     if (this._inputElement !== "") {
@@ -29,12 +49,40 @@ class TodoApp extends Component {
     console.log(this.state.stItems);
     e.preventDefault();
   }
+  addLongTermItem(e) {
+    if (this._inputElement !== "") {
+      var newLongTermItem = {
+        text: this._inputElement.value,
+        key: Date.now()
+      };
+      this.setState(prevState => {
+        return {
+          ltItems: prevState.ltItems.concat(newLongTermItem)
+        };
+      });
+    }
+    this._inputElement.value = "";
+    console.log(this.state.ltItems);
+    e.preventDefault();
+  }
   render() {
     return (
       <div className="todoListMain">
-        <div className="shortTermColumn">
-          <h6>Short Term </h6>
-          <TodoItemsST entries={this.state.stItems} />
+        <div className="columns">
+          <div className="shortTermColumn">
+            <h4>To Do Today</h4>
+            <TodoList
+              entries={this.state.stItems}
+              delete={this.deleteShortTermItem}
+            />
+          </div>
+          <div className="longTermColumn">
+            <h4>To Do Later</h4>
+            <TodoList
+              entries={this.state.ltItems}
+              delete={this.deleteLongTermItem}
+            />
+          </div>
         </div>
 
         <div className="entryForm">
