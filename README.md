@@ -6,8 +6,10 @@ particle background that enables users to play around and kill some time while t
 Coming Soon:
 Easy access backgradients
 easy input for changing links
-![newtabimg](\public\newtabimg.PNG)
-Format: ![Alt Text](url)
+
+### example:
+![newtabimg](https://github.com/simonmahns/newtab/blob/master/public/newtabimg.PNG)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
