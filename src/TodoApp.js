@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 import TodoList from "./TodoList";
 import "./todo.css";
-
+var stArray = [];
+var ltArray = [];
 class TodoApp extends Component {
   constructor(props) {
     super(props);
@@ -35,6 +36,7 @@ class TodoApp extends Component {
   }
   addShortTermItem(e) {
     if (this._inputElement !== "") {
+      stArray = stArray.concat(this._inputElement.value);
       var newShortTermItem = {
         text: this._inputElement.value,
         key: Date.now()
@@ -47,10 +49,13 @@ class TodoApp extends Component {
     }
     this._inputElement.value = "";
     console.log(this.state.stItems);
+    localStorage.setItem("shortTermGoals", stArray);
+    console.log(localStorage.getItem("shortTermGoals"));
     e.preventDefault();
   }
   addLongTermItem(e) {
     if (this._inputElement !== "") {
+      ltArray = ltArray.concat(this._inputElement.value);
       var newLongTermItem = {
         text: this._inputElement.value,
         key: Date.now()
@@ -63,6 +68,8 @@ class TodoApp extends Component {
     }
     this._inputElement.value = "";
     console.log(this.state.ltItems);
+    localStorage.setItem("longTermGoals", ltArray);
+    console.log(localStorage.getItem("longTermGoals"));
     e.preventDefault();
   }
   render() {
