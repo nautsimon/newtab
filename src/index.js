@@ -4,6 +4,22 @@ import "./index.css";
 import Particles from "react-particles-js";
 import TodoApp from "./TodoApp";
 
+let tempStArray = localStorage.getItem("shortTermGoals");
+if (tempStArray.length < 1 || tempStArray === undefined) {
+  var stArraytemp = [];
+  console.log("if" + typeof stArraytemp);
+  console.log("temp " + stArraytemp);
+} else {
+  console.log("else" + localStorage.getItem("shortTermGoals"));
+  let original = localStorage.getItem("shortTermGoals");
+  let obj = JSON.parse(original);
+  stArraytemp = obj;
+  console.log(stArraytemp);
+  window.stItems = stArraytemp;
+  console.log("starting with pee" + window.stItems);
+}
+
+export default stArraytemp;
 var particleDestination = document.querySelector("#particle");
 var todolistDestination = document.querySelector("#todoList");
 

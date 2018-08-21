@@ -21,7 +21,7 @@ class TodoList extends Component {
   render() {
     var todoEntries = this.props.entries; //receving the entries
     var listItems = todoEntries.map(this.createTasks); //uses map to create a list where each item is turned into xml
-
+    console.log("LIST OF STUFF" + listItems);
     return (
       <ul className="list">
         <FlipMove duration={150} easing="ease-out">
