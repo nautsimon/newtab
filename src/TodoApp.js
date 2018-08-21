@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-
 import TodoList from "./TodoList";
 import "./todo.css";
-import { stArraytemp, ltArraytemp } from "./index";
+import { stArraytemp, ltArraytemp } from "./InitialConfig";
+console.log("imported starray" + stArraytemp);
 
 var stArray = [];
+stArray = stArraytemp;
+console.log("starray update completed: " + stArray);
 var ltArray = [];
+ltArray = ltArraytemp;
 class TodoApp extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +17,10 @@ class TodoApp extends Component {
       stItems: stArraytemp,
       ltItems: ltArraytemp
     };
-
+    console.log(
+      "currently stored st: " + localStorage.getItem("shortTermGoals")
+    );
+    console.log("current state st: " + this.state.stItems);
     this.addShortTermItem = this.addShortTermItem.bind(this);
     this.addLongTermItem = this.addLongTermItem.bind(this);
     this.deleteLongTermItem = this.deleteLongTermItem.bind(this);
@@ -55,20 +61,31 @@ class TodoApp extends Component {
 
   addShortTermItem(e) {
     if (this._inputElement.value !== "") {
+      console.log("current state st: " + this.state.stItems);
       var newShortTermItem = {
         text: this._inputElement.value,
         key: Date.now()
       };
-      stArray.push(newShortTermItem);
+      console.log("old starray" + stArray);
+      stArray = stArray.concat(newShortTermItem);
+      console.log("new starray" + stArray);
       let str = JSON.stringify(stArray);
       localStorage.setItem("shortTermGoals", str);
-      console.log(localStorage.getItem("shortTermGoals"));
-      this.setState({
-        stItems: stArray
-      });
+
+      this.updateSt();
     }
     this._inputElement.value = "";
     e.preventDefault();
+  }
+  updateSt() {
+    this.setState({
+      stItems: stArray
+    });
+  }
+  updateLt() {
+    this.setState({
+      ltItems: ltArray
+    });
   }
   addLongTermItem(e) {
     if (this._inputElement.value !== "") {
@@ -76,17 +93,14 @@ class TodoApp extends Component {
         text: this._inputElement.value,
         key: Date.now()
       };
-      ltArray.push(newLongTermItem);
+      ltArray = ltArray.concat(newLongTermItem);
 
       let str = JSON.stringify(ltArray);
       localStorage.setItem("longTermGoals", str);
 
-      this.setState({
-        ltItems: ltArray
-      });
+      this.updateLt();
     }
     this._inputElement.value = "";
-
     e.preventDefault();
   }
   render() {

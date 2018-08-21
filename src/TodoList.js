@@ -10,9 +10,10 @@ class TodoList extends Component {
     //this function is passing the argument item into
     return (
       <li onClick={() => this.delete(item.key)} key={item.key}>
-        {item.text}
+        <span className="listText">{item.text}</span>
       </li>
     );
+
     //this is returning the
   }
   delete(key) {
