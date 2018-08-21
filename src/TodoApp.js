@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import TodoList from "./TodoList";
 import "./todo.css";
 import { stArraytemp, ltArraytemp } from "./InitialConfig";
-console.log("imported starray" + stArraytemp);
 
 var stArray = [];
 stArray = stArraytemp;
-console.log("starray update completed: " + stArray);
+
 var ltArray = [];
 ltArray = ltArraytemp;
 class TodoApp extends Component {
@@ -17,10 +16,7 @@ class TodoApp extends Component {
       stItems: stArraytemp,
       ltItems: ltArraytemp
     };
-    console.log(
-      "currently stored st: " + localStorage.getItem("shortTermGoals")
-    );
-    console.log("current state st: " + this.state.stItems);
+
     this.addShortTermItem = this.addShortTermItem.bind(this);
     this.addLongTermItem = this.addLongTermItem.bind(this);
     this.deleteLongTermItem = this.deleteLongTermItem.bind(this);
@@ -61,14 +57,13 @@ class TodoApp extends Component {
 
   addShortTermItem(e) {
     if (this._inputElement.value !== "") {
-      console.log("current state st: " + this.state.stItems);
       var newShortTermItem = {
         text: this._inputElement.value,
         key: Date.now()
       };
-      console.log("old starray" + stArray);
+
       stArray = stArray.concat(newShortTermItem);
-      console.log("new starray" + stArray);
+
       let str = JSON.stringify(stArray);
       localStorage.setItem("shortTermGoals", str);
 

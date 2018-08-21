@@ -7,14 +7,11 @@ class TodoList extends Component {
     this.createTasks = this.createTasks.bind(this);
   }
   createTasks(item) {
-    //this function is passing the argument item into
     return (
       <li onClick={() => this.delete(item.key)} key={item.key}>
         <span className="listText">{item.text}</span>
       </li>
     );
-
-    //this is returning the
   }
   delete(key) {
     this.props.delete(key);

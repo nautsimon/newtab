@@ -120,5 +120,8 @@
   hyphens: auto;
 }
 /* media queries */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
+  .columns {
+    margin-bottom: 14%;
+  }
 }

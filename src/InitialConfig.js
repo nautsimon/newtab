@@ -6,14 +6,11 @@ if (
   tempStArray.length < 1 ||
   tempStArray === undefined
 ) {
-  console.log("if");
   var stArraytemp = [];
 } else {
-  console.log("else");
   let original = localStorage.getItem("shortTermGoals");
   let obj = JSON.parse(original);
   stArraytemp = obj;
-  console.log("unimported starray" + stArraytemp);
 }
 
 if (
