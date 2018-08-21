@@ -28,7 +28,6 @@ body {
     #659999
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
 canvas {
   pointer-events: auto;
   z-index: -1;
@@ -58,11 +57,9 @@ canvas {
   text-transform: uppercase;
   font-size: 16px;
 }
-
 #nav-a a:hover {
   color: #71c8d1;
 }
-
 .datediv {
   text-align: center;
 }
@@ -72,9 +69,12 @@ canvas {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-
 h4 {
   display: flex;
   align-content: flex-start;
   margin-bottom: -10px;
+}
+.justifyRight {
+  margin-left: auto;
+  margin-right: 0;
 }

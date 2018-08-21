@@ -4,22 +4,31 @@ import "./index.css";
 import Particles from "react-particles-js";
 import TodoApp from "./TodoApp";
 
-let tempStArray = localStorage.getItem("shortTermGoals");
-let tempLtArray = localStorage.getItem("longTermGoals");
-console.log("swag" + tempLtArray);
-if (tempStArray === undefined) {
+var tempStArray = localStorage.getItem("shortTermGoals");
+var tempLtArray = localStorage.getItem("longTermGoals");
+// console.log("swag " + stLen < 1;
+if (
+  tempStArray.length < 1 ||
+  tempStArray === undefined ||
+  tempStArray == null
+) {
   var stArraytemp = [];
   console.log("if" + typeof stArraytemp);
   console.log("temp " + stArraytemp);
 } else {
   console.log("else" + localStorage.getItem("shortTermGoals"));
   let original = localStorage.getItem("shortTermGoals");
+  console.log(typeof original);
   let obj = JSON.parse(original);
   stArraytemp = obj;
   console.log(stArraytemp);
 }
 
-if (tempLtArray === undefined || tempLtArray === null) {
+if (
+  tempLtArray.length < 1 ||
+  tempLtArray === undefined ||
+  tempLtArray === null
+) {
   var ltArraytemp = [];
   console.log("if" + typeof ltArraytemp);
   console.log("temp " + ltArraytemp);

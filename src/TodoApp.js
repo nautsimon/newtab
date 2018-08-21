@@ -62,7 +62,6 @@ class TodoApp extends Component {
         key: Date.now()
       };
       stArray.push(newShortTermItem);
-      console.log("STAERRAY CONCACT: " + stArray);
       let str = JSON.stringify(stArray);
       localStorage.setItem("shortTermGoals", str);
       console.log(localStorage.getItem("shortTermGoals"));
@@ -72,6 +71,8 @@ class TodoApp extends Component {
     }
     this._inputElement.value = "";
     console.log(this.state.stItems);
+    console.log("currentST(state)" + this.state.stItems);
+    console.log("currentST(state)" + this.state.stItems);
 
     e.preventDefault();
   }
@@ -106,13 +107,6 @@ class TodoApp extends Component {
     );
   }
   render() {
-    // this.updateArray();
-    // console.log("temp2: " + window.stArrayte);
-    stArray = stArraytemp;
-    ltArray = ltArraytemp;
-    // this.state.stItems = stArray;
-
-    // console.log("new stitems " + window.stItems);
     return (
       <div className="todoListMain">
         <div className="columns">
@@ -124,7 +118,7 @@ class TodoApp extends Component {
             />
           </div>
           <div className="longTermColumn">
-            <h4>To Do Later</h4>
+            <h4 className="justifyRight">To Do Later</h4>
             <TodoList
               entries={this.state.ltItems}
               delete={this.deleteLongTermItem}

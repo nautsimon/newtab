@@ -55,6 +55,7 @@
   margin-bottom: 0px;
   border-radius: 2px;
   transition: color 0.2s ease-out;
+  overflow: auto;
 }
 .todoListMain .list li:hover {
   color: #79bcc4;
@@ -63,16 +64,19 @@
   list-style: none;
   padding-left: 0px;
   padding-right: 0px;
-
   /* wrappping */
   white-space: pre-wrap; /* CSS3 */
   white-space: -moz-pre-wrap; /* Firefox */
-  white-space: -pre-wrap; /* Opera <7 */
+  white-space: -pre-wrap;
+  /* Opera <7 */
   white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* IE */
+  word-wrap: break-word;
+  /* IE */
 }
 .todoListMain .list ul {
   width: 100%;
+  word-wrap: break-word;
+  overflow: auto;
 }
 .entryForm {
   position: fixed;
@@ -81,7 +85,6 @@
   margin-left: -240px;
   padding-bottom: 20px;
 }
-
 .columns {
   margin-left: 20%;
   margin-right: 20%;
@@ -90,16 +93,20 @@
   flex-direction: row;
   margin-bottom: 5%;
 }
-
 .columns .longTermColumn {
+  pointer-events: auto;
   color: #fff;
   display: flex;
   flex-direction: column;
   text-align: right;
+  flex: 0 0 48%;
+  word-wrap: break-word;
 }
 .columns .shortTermColumn {
   color: #fff;
   display: flex;
   flex-direction: column;
+  flex: 0 0 48%;
   text-align: left;
+  word-wrap: break-word;
 }
