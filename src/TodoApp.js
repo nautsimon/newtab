@@ -55,8 +55,6 @@ class TodoApp extends Component {
 
   addShortTermItem(e) {
     if (this._inputElement.value !== "") {
-      console.log("not blank ");
-
       var newShortTermItem = {
         text: this._inputElement.value,
         key: Date.now()
@@ -70,10 +68,6 @@ class TodoApp extends Component {
       });
     }
     this._inputElement.value = "";
-    console.log(this.state.stItems);
-    console.log("currentST(state)" + this.state.stItems);
-    console.log("currentST(state)" + this.state.stItems);
-
     e.preventDefault();
   }
   addLongTermItem(e) {
@@ -83,28 +77,17 @@ class TodoApp extends Component {
         key: Date.now()
       };
       ltArray.push(newLongTermItem);
-      console.log("STAERRAY CONCACT: " + ltArray);
+
       let str = JSON.stringify(ltArray);
       localStorage.setItem("longTermGoals", str);
-      console.log(localStorage.getItem("longTermGoals"));
+
       this.setState({
         ltItems: ltArray
       });
     }
     this._inputElement.value = "";
-    console.log(this.state.ltItems);
 
     e.preventDefault();
-  }
-  updateArray() {
-    this.setState(
-      {
-        stItems: stArray
-      },
-      () => {
-        console.log("ULTIMATE: " + this.state.stItems);
-      }
-    );
   }
   render() {
     return (

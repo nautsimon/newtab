@@ -6,22 +6,18 @@ import TodoApp from "./TodoApp";
 
 var tempStArray = localStorage.getItem("shortTermGoals");
 var tempLtArray = localStorage.getItem("longTermGoals");
-// console.log("swag " + stLen < 1;
+
 if (
   tempStArray.length < 1 ||
   tempStArray === undefined ||
   tempStArray == null
 ) {
   var stArraytemp = [];
-  console.log("if" + typeof stArraytemp);
-  console.log("temp " + stArraytemp);
 } else {
-  console.log("else" + localStorage.getItem("shortTermGoals"));
   let original = localStorage.getItem("shortTermGoals");
-  console.log(typeof original);
+
   let obj = JSON.parse(original);
   stArraytemp = obj;
-  console.log(stArraytemp);
 }
 
 if (
@@ -30,14 +26,10 @@ if (
   tempLtArray === null
 ) {
   var ltArraytemp = [];
-  console.log("if" + typeof ltArraytemp);
-  console.log("temp " + ltArraytemp);
 } else {
-  console.log("else" + localStorage.getItem("longTermGoals"));
   let original = localStorage.getItem("longTermGoals");
   let obj = JSON.parse(original);
   ltArraytemp = obj;
-  console.log(stArraytemp);
 }
 
 export { stArraytemp, ltArraytemp };
