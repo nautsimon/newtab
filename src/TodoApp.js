@@ -2,34 +2,27 @@ import React, { Component } from "react";
 
 import TodoList from "./TodoList";
 import "./todo.css";
-import stArraytemp from "./index";
+import { stArraytemp, ltArraytemp } from "./index";
 
 var stArray = [];
-
+var ltArray = [];
 class TodoApp extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       stItems: stArraytemp,
-      ltItems: []
+      ltItems: ltArraytemp
     };
 
     this.addShortTermItem = this.addShortTermItem.bind(this);
     this.addLongTermItem = this.addLongTermItem.bind(this);
     this.deleteLongTermItem = this.deleteLongTermItem.bind(this);
     this.deleteShortTermItem = this.deleteShortTermItem.bind(this);
-    // this.updateState = updateState.bind(this);
   }
 
   deleteShortTermItem(key) {
-    // console.log("the neweststi " + this.state.stItems);
-    // stArray = this.state.stItems;
-    // let str = JSON.stringify(stArray);
-    // localStorage.setItem("shortTermGoals", str);
     var filteredStItems = this.state.stItems.filter(function(item) {
-      console.log(item.key);
-      console.log("key: " + key);
       return item.key !== key;
     });
     this.setState(
@@ -45,13 +38,19 @@ class TodoApp extends Component {
   }
 
   deleteLongTermItem(key) {
-    // console.log("longtermlist: " + this.state.ltItems.key);
     var filteredLtItems = this.state.ltItems.filter(function(item) {
       return item.key !== key;
     });
-    this.setState({
-      ltItems: filteredLtItems
-    });
+    this.setState(
+      {
+        ltItems: filteredLtItems
+      },
+      () => {
+        ltArray = this.state.ltItems;
+        let str = JSON.stringify(ltArray);
+        localStorage.setItem("longTermGoals", str);
+      }
+    );
   }
 
   addShortTermItem(e) {
@@ -82,10 +81,13 @@ class TodoApp extends Component {
         text: this._inputElement.value,
         key: Date.now()
       };
-      this.setState(prevState => {
-        return {
-          ltItems: prevState.ltItems.concat(newLongTermItem)
-        };
+      ltArray.push(newLongTermItem);
+      console.log("STAERRAY CONCACT: " + ltArray);
+      let str = JSON.stringify(ltArray);
+      localStorage.setItem("longTermGoals", str);
+      console.log(localStorage.getItem("longTermGoals"));
+      this.setState({
+        ltItems: ltArray
       });
     }
     this._inputElement.value = "";
@@ -107,6 +109,7 @@ class TodoApp extends Component {
     // this.updateArray();
     // console.log("temp2: " + window.stArrayte);
     stArray = stArraytemp;
+    ltArray = ltArraytemp;
     // this.state.stItems = stArray;
 
     // console.log("new stitems " + window.stItems);

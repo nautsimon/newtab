@@ -5,7 +5,9 @@ import Particles from "react-particles-js";
 import TodoApp from "./TodoApp";
 
 let tempStArray = localStorage.getItem("shortTermGoals");
-if (tempStArray.length < 1 || tempStArray === undefined) {
+let tempLtArray = localStorage.getItem("longTermGoals");
+console.log("swag" + tempLtArray);
+if (tempStArray === undefined) {
   var stArraytemp = [];
   console.log("if" + typeof stArraytemp);
   console.log("temp " + stArraytemp);
@@ -15,11 +17,21 @@ if (tempStArray.length < 1 || tempStArray === undefined) {
   let obj = JSON.parse(original);
   stArraytemp = obj;
   console.log(stArraytemp);
-  window.stItems = stArraytemp;
-  console.log("starting with pee" + window.stItems);
 }
 
-export default stArraytemp;
+if (tempLtArray === undefined || tempLtArray === null) {
+  var ltArraytemp = [];
+  console.log("if" + typeof ltArraytemp);
+  console.log("temp " + ltArraytemp);
+} else {
+  console.log("else" + localStorage.getItem("longTermGoals"));
+  let original = localStorage.getItem("longTermGoals");
+  let obj = JSON.parse(original);
+  ltArraytemp = obj;
+  console.log(stArraytemp);
+}
+
+export { stArraytemp, ltArraytemp };
 var particleDestination = document.querySelector("#particle");
 var todolistDestination = document.querySelector("#todoList");
 
