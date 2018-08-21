@@ -1,4 +1,4 @@
-## New Tab Google Extension
+## New Tab Chrome Extension
 This was created for students with ADHD or your standard procrastinator. This new tab will catch you before you navigate
 away from your current project and remind you of what you have to do. There is also an interactive
 particle background that enables users to play around and kill some time while they ponder their responsibilities.
