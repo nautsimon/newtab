@@ -1,15 +1,21 @@
 import React, { Component } from "react";
 import "./popup.css";
 import Popup from "reactjs-popup";
+import { linksTemp } from "./InitialConfig";
 // import PropTypes from "prop-types";
 // import "./Handler.js";
 
+var importedLinks = [];
+importedLinks = linksTemp;
+console.log("importedlink" + importedLinks);
 class PopupFile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      links: []
+      links: importedLinks
     };
+    this.props.handler(this.state.links);
+    console.log("initial state" + this.state.links);
     this.setLinks = this.setLinks.bind(this);
   }
 
@@ -24,8 +30,11 @@ class PopupFile extends Component {
           name: this["name" + i].value,
           key: Date.now()
         };
-
+        console.log("first state" + this.state.links);
         tempArray = tempArray.concat(newLink);
+        let str = JSON.stringify(tempArray);
+        localStorage.setItem("links", str);
+        this.props.handler(tempArray);
       }
     }
     this.setState(
@@ -35,9 +44,7 @@ class PopupFile extends Component {
         };
       },
       () => {
-        var pls = this.state.links;
-        this.props.handler(pls);
-        console.log("set" + this.state.links);
+        console.log("second state" + this.state.links);
       }
     );
 
@@ -48,7 +55,12 @@ class PopupFile extends Component {
   render() {
     return (
       <Popup
-        trigger={<button className="openPopup"> [+] </button>}
+        trigger={
+          <button className="openPopup" title="Change Quick Links">
+            {" "}
+            [+]{" "}
+          </button>
+        }
         modal
         closeOnDocumentClick
       >
@@ -60,7 +72,8 @@ class PopupFile extends Component {
 
             <div className="popupMain">
               <h2>Customize Quick Links</h2>
-              <p>Put your links below, names cannot exceed 7 characters</p>
+              <p>Put your (full) links below</p>
+
               <form className="popupColumns">
                 <div className="leftColumn">
                   <h3>Link</h3>

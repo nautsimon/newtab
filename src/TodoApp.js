@@ -61,12 +61,9 @@ class TodoApp extends Component {
         text: this._inputElement.value,
         key: Date.now()
       };
-
       stArray = stArray.concat(newShortTermItem);
-
       let str = JSON.stringify(stArray);
       localStorage.setItem("shortTermGoals", str);
-
       this.updateSt();
     }
     this._inputElement.value = "";

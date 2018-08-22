@@ -17,6 +17,7 @@
   font-size: 16px;
   background: transparent;
   color: #fff;
+  text-align: center;
 }
 ::-webkit-input-placeholder {
   color: #ffffff;
@@ -39,6 +40,7 @@
   background: transparent;
   color: #fff;
   transition: background-color 0.2s ease-out;
+  width: 150px;
 }
 .todoListMain .entryForm button:hover {
   background: #659999; /* fallback for old browsers */
@@ -91,8 +93,12 @@
   position: fixed;
   bottom: 0;
   left: 50%;
-  margin-left: -240px;
+  margin-left: -260px;
   padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .columns {
   margin-left: 20%;
@@ -123,5 +129,11 @@
 @media screen and (max-width: 900px) {
   .columns {
     margin-bottom: 14%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .entryForm {
+    left: 50%;
+    margin-left: -180px;
   }
 }

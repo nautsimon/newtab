@@ -17,14 +17,6 @@ class Handler extends Component {
     console.log("newstate" + this.state.links);
     console.log("newstate" + this.state.names);
     var theArr = items;
-    // var linksArr = [];
-    // var namesArr = [];
-    // for (let i = 0; i < theArr.length; i++) {
-    //   linksArr = linksArr.concat(theArr[i].link);
-    //   namesArr = namesArr.concat(theArr[i].name);
-    // }
-    // console.log("linksArr" + linksArr);
-    // console.log("namesArr" + namesArr);
     this.setState(
       prevState => {
         return {
