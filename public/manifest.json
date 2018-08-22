@@ -1,12 +1,20 @@
 {
   "manifest_version": 2,
 
-  "name": "My Extension",
-  "description": "This extension is a starting point to create a real Chrome extension",
+  "name": "GreyTab",
+  "description": "An aesthentic productivity chrome extension with customizable links, a to do list, and a background with interactive particles",
   "version": "0.0.1",
 
   "chrome_url_overrides": {
     "newtab": "index.html"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "100": "icon100.png",
+      "128": "icon128.png"
+    }
   },
   "icons": {
     "16": "favicon.ico",
