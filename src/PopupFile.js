@@ -2,12 +2,9 @@ import React, { Component } from "react";
 import "./popup.css";
 import Popup from "reactjs-popup";
 import { linksTemp } from "./InitialConfig";
-// import PropTypes from "prop-types";
-// import "./Handler.js";
 
 var importedLinks = [];
 importedLinks = linksTemp;
-console.log("importedlink" + importedLinks);
 class PopupFile extends Component {
   constructor(props) {
     super(props);
@@ -15,22 +12,20 @@ class PopupFile extends Component {
       links: importedLinks
     };
     this.props.handler(this.state.links);
-    console.log("initial state" + this.state.links);
+
     this.setLinks = this.setLinks.bind(this);
   }
 
   setLinks(e) {
     var tempArray = [];
     for (let i = 0; i < 7; i++) {
-      console.log(this["name" + i].value);
-      console.log(this["link" + i].value);
       if (this["name" + i].value !== "" && this["link" + i].value !== "") {
         var newLink = {
           link: this["link" + i].value,
           name: this["name" + i].value,
           key: Date.now()
         };
-        console.log("first state" + this.state.links);
+
         tempArray = tempArray.concat(newLink);
         let str = JSON.stringify(tempArray);
         localStorage.setItem("links", str);
@@ -43,12 +38,9 @@ class PopupFile extends Component {
           links: tempArray
         };
       },
-      () => {
-        console.log("second state" + this.state.links);
-      }
+      () => {}
     );
 
-    console.log("updatepassed" + this.state.links);
     e.preventDefault();
   }
 

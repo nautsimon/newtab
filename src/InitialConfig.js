@@ -27,16 +27,13 @@ if (
   ltArraytemp = obj;
 }
 //retreving links
-console.log(links);
+
 if (links == null || links.length < 1 || links === undefined) {
-  console.log("if");
   var linksTemp = [];
 } else {
-  console.log("else");
   let original = localStorage.getItem("links");
   let obj = JSON.parse(original);
   linksTemp = obj;
-  console.log(linksTemp);
 }
 
 export { stArraytemp, ltArraytemp, linksTemp };

@@ -30,7 +30,6 @@ class Handler extends Component {
     );
   }
   render() {
-    // const { linkArray } = this.state;
     return (
       <div>
         <PopupFile handler={this.setNewArr} />

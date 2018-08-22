@@ -6,7 +6,6 @@ class Links extends Component {
   }
 
   createLinks(item) {
-    console.log("hihi");
     return (
       <li key={item.key}>
         <a href={item.link}>[{item.name}]</a>
@@ -17,9 +16,8 @@ class Links extends Component {
   render() {
     var input = this.props.links;
 
-    var listLinks = input.map(this.createLinks); //uses map to create a list where each item is turned into xml
-    // var listNames = inputNames.map(this.createLinks); //uses map to create a list where each item is turned into xml
-    console.log("listlinkes" + listLinks);
+    var listLinks = input.map(this.createLinks);
+
     return (
       <div id="nav-a">
         <nav className="border">
