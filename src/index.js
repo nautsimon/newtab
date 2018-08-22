@@ -1,14 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "./Handler";
 import Particles from "react-particles-js";
 import "./InitialConfig";
 import TodoApp from "./TodoApp";
+
+import Links from "./Links";
+
 document.getElementById("time").innerHTML = new Date().toDateString();
 
 var particleDestination = document.querySelector("#particle");
 var todolistDestination = document.querySelector("#todoList");
 
+var linksDestination = document.querySelector("#links");
 ReactDOM.render(
   <div>
     <Particles
@@ -131,4 +136,11 @@ ReactDOM.render(
     <TodoApp />
   </div>,
   todolistDestination
+);
+
+ReactDOM.render(
+  <div>
+    <Links />
+  </div>,
+  linksDestination
 );
