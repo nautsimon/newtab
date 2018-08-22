@@ -7,6 +7,7 @@
   bottom: 0;
   padding-bottom: 4px;
   pointer-events: auto;
+  z-index: 30;
   background: transparent;
   border-width: 0;
   cursor: pointer;
@@ -68,4 +69,5 @@ h3 {
 }
 .popupMain {
   pointer-events: none;
+  color: #000000;
 }

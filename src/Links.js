@@ -1,31 +1,32 @@
 import React, { Component } from "react";
 class Links extends Component {
-  //   constructor(props) {
-  //     super(props);
-  //     // this.createTasks = this.createTasks.bind(this);
-  //   }
-  //   createTasks(item) {
-  //     return (
-  //       <li>
-  //         <a href={"https://mail.google.com/mail/u/0/#inbox"}>[gmail]</a>
-  //       </li>
-  //       // <li onClick={() => this.delete(item.key)} key={item.key}>
-  //       //   <span className="listText">{item.text}</span>
-  //       // </li>
-  //     );
-  //   }
+  constructor(props) {
+    super(props);
+    this.createLinks = this.createLinks.bind(this);
+  }
+
+  createLinks(item) {
+    console.log("hihi");
+    return (
+      <li key={item.key}>
+        <a href={item.link}>[{item.name}]</a>
+      </li>
+    );
+  }
 
   render() {
-    console.log("YEET" + this.props.linkArray);
-    // var todoEntries = this.props.entries; //receving the entries
-    // var listItems = todoEntries.map(this.createTasks); //uses map to create a list where each item is turned into xml
+    var input = this.props.links;
 
-    return true;
-    //   <div id="nav-a">
-    //     <nav class="border">
-    //       <ul>{listItems}</ul>
-    //     </nav>
-    //   </div>
+    var listLinks = input.map(this.createLinks); //uses map to create a list where each item is turned into xml
+    // var listNames = inputNames.map(this.createLinks); //uses map to create a list where each item is turned into xml
+    console.log("listlinkes" + listLinks);
+    return (
+      <div id="nav-a">
+        <nav className="border">
+          <ul>{listLinks}</ul>
+        </nav>
+      </div>
+    );
   }
 }
 

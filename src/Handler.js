@@ -1,43 +1,50 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import PopupFile from "./PopupFile";
 import Links from "./Links";
-var popupDestination = document.querySelector("#popup");
+import PopupFile from "./PopupFile";
+
 class Handler extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newArr: []
+      links: []
     };
     this.setNewArr = this.setNewArr.bind(this);
   }
-  setNewArr(tharray) {
-    console.log("eatmyfuckingass");
-    // this.setState(
-    //   {
-    //     newArr: tharray
-    //   }
-    //   //   },
-    //   //   () => {s
-    //   //     console.log("YEET" + this.props.linkArray);
-    //   //   }
-    // );
+  consolee(item) {
+    console.log(item.links);
   }
+  setNewArr(items) {
+    console.log("newstate" + this.state.links);
+    console.log("newstate" + this.state.names);
+    var theArr = items;
+    // var linksArr = [];
+    // var namesArr = [];
+    // for (let i = 0; i < theArr.length; i++) {
+    //   linksArr = linksArr.concat(theArr[i].link);
+    //   namesArr = namesArr.concat(theArr[i].name);
+    // }
+    // console.log("linksArr" + linksArr);
+    // console.log("namesArr" + namesArr);
+    this.setState(
+      prevState => {
+        return {
+          links: theArr
+        };
+      },
 
+      () => {
+        console.log("newstate" + this.state.links);
+      }
+    );
+  }
   render() {
     // const { linkArray } = this.state;
     return (
       <div>
         <PopupFile handler={this.setNewArr} />
-        {/* <Links linkArray={linkArray} /> */}
+        <Links links={this.state.links} />
       </div>
     );
   }
 }
 export default Handler;
-ReactDOM.render(
-  <div>
-    <PopupFile />
-  </div>,
-  popupDestination
-);

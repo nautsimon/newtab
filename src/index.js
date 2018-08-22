@@ -1,12 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import "./Handler";
+import Handler from "./Handler";
 import Particles from "react-particles-js";
 import "./InitialConfig";
 import TodoApp from "./TodoApp";
-
-import Links from "./Links";
 
 document.getElementById("time").innerHTML = new Date().toDateString();
 
@@ -140,7 +138,7 @@ ReactDOM.render(
 
 ReactDOM.render(
   <div>
-    <Links />
+    <Handler />
   </div>,
   linksDestination
 );

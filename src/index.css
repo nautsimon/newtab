@@ -67,7 +67,7 @@ canvas {
   font-size: 40px;
   color: #fff;
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 h4 {
   display: flex;
