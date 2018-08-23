@@ -1,14 +1,14 @@
 ## New Tab Chrome Extension
 This was created for students with ADHD or your standard procrastinator. This new tab will catch you before you navigate
-away from your current project and remind you of what you have to do. There is also an interactive
-particle background that enables users to play around and kill some time while they ponder their responsibilities.
+away from your current project and remind you of what you have to do. There is also an relaxing interactive
+particle background that enables users to play around and kill some time while they "ponder" their responsibilities.
 
 Coming Soon:
 Easy access backgradients
 easy input for changing links
 
 ### example:
-![newtabimg](https://github.com/simonmahns/newtab/blob/master/public/newtabimg.PNG)
+![newtabimg](https://github.com/simonmahns/newtab/blob/master/public/Capture.PNG)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
