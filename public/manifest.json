@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "GreyTab",
-  "description": "An aesthentic productivity chrome extension with customizable links, a to do list, and a background with interactive particles",
-  "version": "0.0.1",
+  "name": "Pesto aioli",
+  "description": "An aesthetic productivity chrome extension with customizable quick links, a to do list, and a background with interactive particles",
+  "version": "0.1.1",
 
   "chrome_url_overrides": {
     "newtab": "index.html"

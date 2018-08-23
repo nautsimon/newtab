@@ -10,12 +10,10 @@ class Handler extends Component {
     };
     this.setNewArr = this.setNewArr.bind(this);
   }
-  consolee(item) {
-    console.log(item.links);
-  }
+
   setNewArr(items) {
-    console.log("newstate" + this.state.links);
-    console.log("newstate" + this.state.names);
+    // console.log("newstate" + this.state.links);
+    // console.log("newstate" + this.state.names);
     var theArr = items;
     this.setState(
       prevState => {

@@ -100,14 +100,14 @@ class TodoApp extends Component {
       <div className="todoListMain">
         <div className="columns">
           <div className="shortTermColumn">
-            <h4>To Do Today</h4>
+            <p className="listName">To Do Today</p>
             <TodoList
               entries={this.state.stItems}
               delete={this.deleteShortTermItem}
             />
           </div>
           <div className="longTermColumn">
-            <h4 className="justifyRight">To Do Later</h4>
+            <p className="listName">To Do Later</p>
             <TodoList
               entries={this.state.ltItems}
               delete={this.deleteLongTermItem}

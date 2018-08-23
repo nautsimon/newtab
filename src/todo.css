@@ -6,6 +6,11 @@
 @-ms-viewport {
   width: device-width;
 }
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
 /* Style the input */
 .entryForm {
   pointer-events: auto;
@@ -59,11 +64,11 @@
   pointer-events: none;
   margin-bottom: 0px;
   margin-top: 0px;
-  line-height: 14px;
+  line-height: 18px;
 }
 .listText {
   line-height: 50%;
-  font-size: 13px;
+  font-size: 17px;
   margin-right: 0px;
   cursor: pointer;
   pointer-events: auto;
@@ -124,6 +129,11 @@
   flex: 0 0 48%;
   word-break: break-all;
   hyphens: auto;
+}
+.listName {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: -10px;
+  font-size: 24px;
 }
 /* media queries */
 @media screen and (max-width: 900px) {
