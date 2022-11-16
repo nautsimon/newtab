@@ -8,7 +8,7 @@
     "react-dom": "^16.4.2",
     "react-flip-move": "^3.0.2",
     "react-particles-js": "^2.3.0",
-    "react-scripts": "1.1.4",
+    "react-scripts": "5.0.1",
     "reactjs-popup": "^1.2.0"
   },
   "scripts": {
